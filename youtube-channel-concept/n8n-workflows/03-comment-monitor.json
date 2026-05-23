@@ -1,0 +1,90 @@
+{
+  "name": "Money Mind – New Comment Alert",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 */2 * * *"
+            }
+          ]
+        }
+      },
+      "id": "cron-every-2h",
+      "name": "Every 2 Hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "commentThread",
+        "operation": "getAll",
+        "videoId": "YOUR_LATEST_VIDEO_ID",
+        "additionalFields": {
+          "maxResults": 20,
+          "order": "time"
+        }
+      },
+      "id": "get-comments",
+      "name": "Get New Comments",
+      "type": "n8n-nodes-base.youTube",
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.snippet?.topLevelComment?.snippet?.likeCount }}",
+              "rightValue": 5,
+              "operator": { "type": "number", "operation": "gte" }
+            }
+          ]
+        }
+      },
+      "id": "filter-popular",
+      "name": "Filter Popular Comments (5+ likes)",
+      "type": "n8n-nodes-base.filter",
+      "position": [760, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nif (items.length === 0) return [];\n\nlet lines = '';\nfor (const item of items.slice(0, 5)) {\n  const s = item.json.snippet?.topLevelComment?.snippet || {};\n  const author = s.authorDisplayName || 'Unknown';\n  const text = (s.textDisplay || '').substring(0, 120);\n  const likes = s.likeCount || 0;\n  lines += `\\n👤 **${author}** (${likes} likes)\\n💬 ${text}...\\n`;\n}\n\nreturn [{ json: { lines, count: items.length, date: new Date().toLocaleTimeString() } }];"
+      },
+      "id": "format-comments",
+      "name": "Format Comment Summary",
+      "type": "n8n-nodes-base.code",
+      "position": [1020, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "=💬 **{{ $json.count }} Popular Comments Need Reply – Money Mind**\n🕐 {{ $json.date }}\n{{ $json.lines }}\n\n⚡ Reply within 24 hours to boost ranking!"
+            }
+          ]
+        }
+      },
+      "id": "alert-discord",
+      "name": "Alert on Discord",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1280, 300]
+    }
+  ],
+  "connections": {
+    "Every 2 Hours":                     { "main": [[{ "node": "Get New Comments", "type": "main", "index": 0 }]] },
+    "Get New Comments":                  { "main": [[{ "node": "Filter Popular Comments (5+ likes)", "type": "main", "index": 0 }]] },
+    "Filter Popular Comments (5+ likes)":{ "main": [[{ "node": "Format Comment Summary", "type": "main", "index": 0 }]] },
+    "Format Comment Summary":            { "main": [[{ "node": "Alert on Discord", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

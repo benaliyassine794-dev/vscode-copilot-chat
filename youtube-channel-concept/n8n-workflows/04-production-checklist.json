@@ -1,0 +1,54 @@
+{
+  "name": "Money Mind – Weekly Production Checklist",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "cron-monday-morning",
+      "name": "Every Monday 8 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const today = new Date();\nconst days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];\n\nconst schedule = [\n  { day: 'Tuesday',   time: '10:00 AM', type: 'Main Educational Video',    duration: '12–18 min', emoji: '🎓' },\n  { day: 'Wednesday', time: '10:00 AM', type: 'Quick Money Tip',            duration: '5–7 min',   emoji: '💡' },\n  { day: 'Friday',    time: '10:00 AM', type: 'Comparison Video (A vs B)',  duration: '10–15 min', emoji: '⚖️' },\n  { day: 'Sunday',    time: '10:00 AM', type: 'Myth-Busting / Story',       duration: '8–12 min',  emoji: '🔥' }\n];\n\nconst week = `Week of ${today.toDateString()}`;\n\nlet scheduleText = '';\nfor (const s of schedule) {\n  scheduleText += `\\n${s.emoji} **${s.day} ${s.time}** – ${s.type} (${s.duration})`;\n}\n\nreturn [{ json: { week, scheduleText } }];"
+      },
+      "id": "build-checklist",
+      "name": "Build This Week's Plan",
+      "type": "n8n-nodes-base.code",
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "=🗓 **MONEY MIND – Weekly Production Plan**\n📅 {{ $json.week }}\n\n━━━━━━━━━━━━━━━━━━━━\n**This Week's Upload Schedule:**\n{{ $json.scheduleText }}\n\n━━━━━━━━━━━━━━━━━━━━\n**Production Checklist:**\n\n🎬 **4 Videos to Produce:**\n- [ ] Tuesday script written + voiceover recorded\n- [ ] Wednesday script written + voiceover recorded\n- [ ] Friday script written + voiceover recorded\n- [ ] Sunday script written + voiceover recorded\n\n🖼 **4 Thumbnails to Design:**\n- [ ] Tuesday thumbnail (1280×720)\n- [ ] Wednesday thumbnail (1280×720)\n- [ ] Friday thumbnail (1280×720)\n- [ ] Sunday thumbnail (1280×720)\n\n✏️ **4 Metadata Sets to Write:**\n- [ ] 4 titles (under 60 chars each)\n- [ ] 4 descriptions (300+ words each)\n- [ ] 4 sets of tags (10–15 tags each)\n\n⚡ **BATCH TIP:** Record all 4 voiceovers in ONE session today!"
+            }
+          ]
+        }
+      },
+      "id": "send-plan",
+      "name": "Send Weekly Plan",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [760, 300]
+    }
+  ],
+  "connections": {
+    "Every Monday 8 AM":     { "main": [[{ "node": "Build This Week's Plan", "type": "main", "index": 0 }]] },
+    "Build This Week's Plan":{ "main": [[{ "node": "Send Weekly Plan", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

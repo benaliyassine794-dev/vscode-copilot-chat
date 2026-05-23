@@ -1,0 +1,105 @@
+{
+  "name": "Money Mind – Subscriber Milestone Alert",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 12 * * *"
+            }
+          ]
+        }
+      },
+      "id": "cron-daily-noon",
+      "name": "Every Day at Noon",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "channel",
+        "operation": "getAll",
+        "part": ["statistics"],
+        "mine": true
+      },
+      "id": "get-subs",
+      "name": "Get Subscriber Count",
+      "type": "n8n-nodes-base.youTube",
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const subs = parseInt($input.first().json.statistics?.subscriberCount || 0);\n\nconst milestones = [100, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000];\nconst nextMilestone = milestones.find(m => m > subs) || 100000;\nconst prevMilestone = milestones.filter(m => m <= subs).pop() || 0;\nconst progress = prevMilestone > 0\n  ? Math.round(((subs - prevMilestone) / (nextMilestone - prevMilestone)) * 100)\n  : Math.round((subs / nextMilestone) * 100);\n\nconst remaining = nextMilestone - subs;\n\nconst isMilestone = milestones.includes(subs);\n\nreturn [{ json: {\n  subs: subs.toLocaleString(),\n  subsRaw: subs,\n  nextMilestone: nextMilestone.toLocaleString(),\n  remaining: remaining.toLocaleString(),\n  progress,\n  isMilestone\n}}];"
+      },
+      "id": "check-milestone",
+      "name": "Check Milestone",
+      "type": "n8n-nodes-base.code",
+      "position": [760, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.isMilestone }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "equals" }
+            }
+          ]
+        }
+      },
+      "id": "is-milestone",
+      "name": "Is Milestone Reached?",
+      "type": "n8n-nodes-base.filter",
+      "position": [1020, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "=🎉 **MILESTONE REACHED – Money Mind!**\n\n🏆 You just hit **{{ $json.subs }} SUBSCRIBERS!**\n\nNext target: **{{ $json.nextMilestone }}** subscribers\nStill need: **{{ $json.remaining }}** more\nProgress: **{{ $json.progress }}%**\n\n🚀 Keep uploading Tue/Wed/Fri/Sun at 10 AM!"
+            }
+          ]
+        }
+      },
+      "id": "celebrate",
+      "name": "Send Milestone Celebration",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1280, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "=📈 **Daily Subscriber Update – Money Mind**\n\n👥 Current: **{{ $json.subs }}** subscribers\n🎯 Next milestone: **{{ $json.nextMilestone }}**\n📊 Progress: **{{ $json.progress }}%** ▓░░\n🔢 Remaining: **{{ $json.remaining }}** subs to go"
+            }
+          ]
+        }
+      },
+      "id": "daily-update",
+      "name": "Send Daily Update",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1280, 480]
+    }
+  ],
+  "connections": {
+    "Every Day at Noon":   { "main": [[{ "node": "Get Subscriber Count", "type": "main", "index": 0 }]] },
+    "Get Subscriber Count":{ "main": [[{ "node": "Check Milestone", "type": "main", "index": 0 }]] },
+    "Check Milestone":     { "main": [[{ "node": "Is Milestone Reached?", "type": "main", "index": 0 }, { "node": "Send Daily Update", "type": "main", "index": 0 }]] },
+    "Is Milestone Reached?":{ "main": [[{ "node": "Send Milestone Celebration", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}
