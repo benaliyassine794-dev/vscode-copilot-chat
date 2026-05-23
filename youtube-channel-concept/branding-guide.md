@@ -1,164 +1,185 @@
-# دليل الهوية البصرية – قناة "عقل المال"
+# Visual Branding Guide – "Money Mind" YouTube Channel
 
-## الشعار (Logo)
+## Logo Concept
 
-### المفهوم البصري
-- **الشخصية:** رجل شاب عربي بملابس عصرية (قميص أزرق داكن)
-- **العناصر:** يحمل كتابًا + ترمومتر مالي صاعد
-- **الأسلوب:** رسوم متحركة Flat Design حديثة
-- **الخلفية:** دائرة ذهبية مع نص "عقل المال" بالخط العريض
+### Visual Concept
+- **Character:** Young man in smart casual clothes (dark navy shirt)
+- **Props:** Holding a finance book + rising trend arrow
+- **Art Style:** Modern Flat Design animation
+- **Background:** Gold circle with "Money Mind" in bold typography
 
 ---
 
-## لوحة الألوان
+## Color Palette
 
 ```
-الأزرق الداكن الرئيسي:  #1A237E  (الثقة والعمق)
-الأزرق المتوسط:         #283593  (العناوين الفرعية)
-الأزرق الفاتح:          #3F51B5  (الخلفيات الثانوية)
-الذهبي الرئيسي:        #FFD700  (التمييز والتأكيد)
-الذهبي الداكن:          #F9A825  (الإطارات والحدود)
-الأبيض النقي:           #FFFFFF  (الخلفيات والنصوص الرئيسية)
-الرمادي الفاتح:         #F5F5F5  (الخلفيات الثانوية)
-الأحمر التحذيري:        #E53935  (المعلومات السلبية والتحذيرات)
-الأخضر الإيجابي:       #43A047  (المعلومات الإيجابية والنجاح)
+Primary Navy:       #1A237E  (trust & credibility)
+Medium Blue:        #283593  (subheadings)
+Light Blue:         #3F51B5  (secondary backgrounds)
+Primary Gold:       #FFD700  (wealth & highlights)
+Dark Gold:          #F9A825  (borders & accents)
+Pure White:         #FFFFFF  (backgrounds & main text)
+Light Gray:         #F5F5F5  (section backgrounds)
+Warning Red:        #E53935  (negative info & warnings)
+Success Green:      #43A047  (positive info & wins)
 ```
 
 ---
 
-## الخطوط (Typography)
+## Typography
 
-### العربية
-- **العناوين الرئيسية:** Cairo Bold / Tajawal Bold
-- **النصوص العادية:** Cairo Regular / Tajawal Regular
-- **الأرقام والإحصائيات:** Cairo ExtraBold
+### Primary Fonts
+- **Main Headings:** Montserrat ExtraBold
+- **Subheadings:** Montserrat Bold
+- **Body Text:** Montserrat Regular
+- **Numbers & Stats:** Montserrat Black (maximum weight)
 
-### الإنجليزية (للمصطلحات)
-- **العناوين:** Montserrat Bold
-- **النصوص:** Montserrat Regular
+### Font Sizing (video)
+```
+Main Headline:    72–96px
+Sub-headline:     48–60px
+Body text:        32–40px
+Small labels:     24–28px
+```
 
 ---
 
-## تصميم الصور المصغّرة (Thumbnail Template)
+## Thumbnail Template
 
-### القياس: 1280 × 720 بكسل
+### Size: 1280 × 720 pixels
 
 ```
 ┌─────────────────────────────────────────────┐
-│  [خلفية ملوّنة – أزرق داكن أو ذهبي]         │
+│  [Solid color background – navy or gold]    │
 │                                             │
-│  [شخصية متحركة – 40% من المساحة يسارًا]     │
+│  [Animated character – 40% left side]      │
+│  (pointing or reacting toward the text)    │
 │                                             │
-│           [نص عربي عريض – يمين]             │
-│           "عنوان صادم كبير"                 │
-│           [سؤال أو رقم مثير]                │
+│           [Bold headline – right side]     │
+│           "SHOCKING TITLE HERE"            │
+│           [Number or comparison]           │
 │                                             │
-│  [عنصر بصري: سيارة / منزل / أسهم]          │
+│  [Visual prop: car / house / stocks chart] │
 │                                             │
-│  [لوجو صغير أسفل اليمين]                   │
+│  [Small logo – bottom right corner]        │
 └─────────────────────────────────────────────┘
 ```
 
-### قواعد Thumbnail
-1. لا تضع أكثر من 6 كلمات على الصورة
-2. استخدم لون خلفية مختلف لكل موضوع رئيسي
-3. الشخصية يجب أن تشير أو تنظر نحو النص
-4. اجعل العنوان مقروءًا من مسافة بعيدة
+### Thumbnail Rules
+1. No more than 6 words on the image
+2. Use a different background color per content pillar
+3. Character must face or point toward the text
+4. Title must be readable at small sizes (mobile)
+5. High contrast between text and background
 
----
-
-## أسلوب الرسوم المتحركة
-
-### الشخصيات
-- أسلوب Flat 2D مع ظلال خفيفة
-- تعبيرات وجه مبالغ فيها قليلاً (للتعبير العاطفي)
-- حركات ناعمة وسلسة (24 إطار/ثانية)
-- حجم الشخصية: متوسط، غير ضخم
-
-### العناصر البصرية
-- **المخططات:** بسيطة، تتحرك تدريجيًا
-- **الأرقام:** تُعدّ تلقائيًا للأعلى/الأسفل
-- **الأسهم:** تظهر مع صوت "swoosh"
-- **التسليط:** دائرة ضوء لتركيز الانتباه
-
-### الانتقالات
-- انتقالات سلسة (Smooth transitions)
-- لا انتقالات مفاجئة مزعجة
-- استخدام Zoom In عند التأكيد على نقطة مهمة
-
----
-
-## الموسيقى والمؤثرات الصوتية
-
-### الموسيقى الخلفية
-- **النبرة:** هادئة، محفّزة، احترافية
-- **الإيقاع:** متوسط – لا بطيء جدًا ولا سريع
-- **مصادر مجانية:** Pixabay, Free Music Archive, Uppbeat
-
-### مؤثرات صوتية ضرورية
+### Color Coding by Topic
 ```
-💰 صوت عملات معدنية     → عند ذكر المال
-📈 صوت صاعد            → عند الأرقام الإيجابية
-📉 صوت هابط            → عند التحذيرات
-✅ صوت "ding"          → عند النقاط الصحيحة
-❌ صوت "buzz"          → عند الأخطاء الشائعة
-🎯 صوت "pop"           → عند ظهور معلومة مهمة
+Comparisons:        Gold background + navy text
+Myth-Busting:       Red background + white text
+Investing:          Navy background + gold text
+Habits:             Dark green background + white text
+Economics:          Purple background + white text
 ```
 
 ---
 
-## صورة الغلاف (Channel Art)
+## Animation Style
 
-### القياس: 2560 × 1440 بكسل (آمن: 1546 × 423)
+### Characters
+- Flat 2D style with subtle shadows
+- Slightly exaggerated facial expressions
+- Smooth, fluid movement (24 fps)
+- Medium body proportions (not cartoonish, not realistic)
+
+### Visual Elements
+- **Charts:** Animate progressively (bars grow, lines draw)
+- **Numbers:** Count up or down with sound effects
+- **Arrows:** Appear with a "swoosh" sound
+- **Emphasis:** Spotlight circle to focus viewer attention
+- **Text:** Pop in with slight bounce effect
+
+### Transitions
+- Smooth wipes and slides between scenes
+- No jarring jump cuts in animation segments
+- Zoom In when emphasizing a key point
+- Fade to white/black between major sections
+
+---
+
+## Sound Design
+
+### Background Music
+- **Tone:** Calm, upbeat, professional
+- **Tempo:** Medium – not too slow, not too fast
+- **Sources:** Artlist, Musicbed, Uppbeat, Pixabay (free)
+- **Volume:** 15–20% under voiceover
+
+### Essential Sound Effects
+```
+💰 Coin/cash sound     → when mentioning money
+📈 Rising tone         → positive numbers / growth
+📉 Falling tone        → warnings / losses
+✅ Ding / chime        → correct facts / good decisions
+❌ Buzz / error        → common mistakes
+🎯 Pop                 → important information appears
+🔔 Notification bell   → CTA reminders
+```
+
+---
+
+## Channel Art (Banner)
+
+### Size: 2560 × 1440 px (safe area: 1546 × 423 px)
 
 ```
 ┌──────────────────────────────────────────────────┐
 │                                                  │
-│  [شخصية كبيرة يسارًا]    [اسم القناة وسطًا]     │
-│                          "عقل المال"             │
-│                          "تعلّم كيف يفكّر        │
-│                           المال"                 │
-│                          [أيقونة يوتيوب]         │
+│  [Large character – left]   [Channel name]       │
+│                             "Money Mind"         │
+│                             "Learn to think      │
+│                              like money"         │
+│                             [YouTube icon]       │
 │                                                  │
-│  خلفية: تدرّج من الأزرق الداكن إلى الذهبي       │
+│  Background: gradient from dark navy to gold     │
 └──────────────────────────────────────────────────┘
 ```
 
 ---
 
-## نبرة الصوت والأسلوب التحريري
+## Voice & Editorial Style
 
-### الشخصية الصوتية
-- **الثقة:** متكلم واثق، لكن ليس متعجرفًا
-- **البساطة:** شرح معقّد بأسلوب بسيط
-- **الحيوية:** صوت نشيط، ليس مملًا
-- **الاحترافية:** معلومات دقيقة، مدعومة بالأرقام
+### Voice Personality
+- **Confident** but not arrogant
+- **Simple** – explain complex topics in plain English
+- **Energetic** – active delivery, not monotone
+- **Data-driven** – back every claim with numbers
 
-### الأسلوب الكتابي
-- جمل قصيرة وواضحة
-- أسئلة تفاعلية مع المشاهد ("هل تعلم أن...؟")
-- أمثلة عملية من الحياة اليومية العربية
-- تجنّب المصطلحات التقنية المعقّدة
-- إذا استخدمت مصطلح تقني → اشرحه فورًا
+### Writing Style Rules
+- Short, punchy sentences
+- Ask the audience direct questions ("Did you know…?")
+- Use everyday real-world examples
+- Avoid jargon — if you must use a term, define it immediately
+- Vary sentence length to maintain rhythm
 
 ---
 
-## أمثلة على عناوين ناجحة
+## Winning Title Formulas
 
-### الصيغ التي تعمل:
 ```
-"لماذا [شيء شائع] يدمّر [هدف مرغوب]؟"
-"[عدد] أخطاء مالية تفعلها كل يوم بدون ما تعرف"
-"[شيء A] vs [شيء B] – أيهما أذكى؟"
-"الحقيقة التي لا يخبرك بها أحد عن [موضوع]"
-"كيف تحوّل [مبلغ صغير] إلى [مبلغ كبير]؟"
-"لماذا [90%] من الناس يفشلون في [هدف]؟"
+"Why [common thing] is [destroying / making you richer]?"
+"[X] Financial Mistakes You're Making Every Day"
+"[A] vs [B] – Which One Actually Wins?"
+"The Truth Nobody Tells You About [topic]"
+"How to Turn [$small amount] Into [$big amount]"
+"Why [X]% of People Will Never [achieve goal]"
 ```
 
-### أمثلة تطبيقية:
-- "لماذا ادخار المال في البنك يجعلك أفقر؟"
-- "5 أخطاء مالية تفعلها كل شهر بدون ما تشعر"
-- "الأسهم vs العقارات – أيهما أفضل في 2025؟"
-- "الحقيقة التي لا يخبرك بها البنك عن القروض"
-- "كيف تحوّل 500 ريال إلى 500,000 ريال؟"
-- "لماذا 95% من الناس لن يصبحوا أثرياء أبدًا؟"
+### Real Examples
+- "Why Saving in a Bank is Making You Poorer"
+- "5 Money Mistakes You're Making Every Single Month"
+- "Stocks vs Real Estate – Which One Wins in 2025?"
+- "The Truth Your Bank Never Tells You About Loans"
+- "How to Turn $500 Into $500,000"
+- "Why 95% of People Will Never Be Rich"
+- "Buying vs Leasing a Car – The Real Math"
+- "How to Retire Before 45 (Step-by-Step Plan)"

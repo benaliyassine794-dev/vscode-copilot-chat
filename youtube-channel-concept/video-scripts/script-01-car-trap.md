@@ -1,186 +1,209 @@
-# سكريبت فيديو #01
-## "فخ السيارة – كيف تدمّر سيارتك ثروتك؟"
-### مدة الفيديو: 15 دقيقة تقريبًا
+# Video Script #01
+## "The Car Trap – How Your Car Is Destroying Your Wealth"
+### Estimated Duration: 15 minutes
 
 ---
 
-## [00:00 – 00:35] HOOK الافتتاحية
+## [00:00 – 00:35] HOOK
 
-**[مشهد: شخصية متحركة تقود سيارة فاخرة بسعادة]**
+**[Scene: Animated character driving a shiny new car, smiling proudly]**
 
-> "هذا الشخص يظن أنه اتخذ أذكى قرار في حياته..."
+> "This person thinks he just made the smartest financial decision of his life…"
 
-**[مشهد: السيارة تحترق ببطء رمزيًا بينما تتساقط الأوراق النقدية]**
+**[Scene: Car slowly burning while banknotes fall around it]**
 
-> "لكن الحقيقة؟ هو يحرق ثروته كل يوم وهو لا يشعر."
+> "But the truth? He's burning his wealth every single day — and he has no idea."
 
-**[صوت توقف مفاجئ + كلمة "STOP" بالعربية على الشاشة]**
+**[Sudden stop sound effect + "STOP" appears on screen]**
 
-> "في هذا الفيديو سأريك لماذا السيارة هي أكبر فخ مالي في القرن الحادي والعشرين... وكيف تتجنّبه."
+> "In this video, I'm going to show you why a car is the biggest financial trap of the 21st century…
+> and exactly how to avoid it."
 
 ---
 
-## [00:35 – 02:00] المقدمة – تعريف المشكلة
+## [00:35 – 02:00] INTRODUCTION – Setting Up the Problem
 
-**[رسوم متحركة: إحصائيات على الشاشة]**
+**[Animated stats appear on screen]**
 
-> "لو سألت أي إنسان: ما هو أكبر حلم مادي عندك؟
-> معظم الناس سيقول: سيارة جديدة أو منزل.
+> "Ask anyone: what's your biggest financial dream?
+> Most people say: a new car or a house.
 >
-> واليوم سنتكلم عن السيارة...
-> لأن السيارة هي السبب الأول الذي يمنع الناس من بناء ثروة حقيقية.
+> Today, we're talking about the car.
 >
-> لكن قبل ما نبدأ، خبّرني في التعليقات:
-> كم سيارة اشتريتها حتى الآن في حياتك؟"
+> Because the car is the number one reason most people
+> can never build real wealth.
+>
+> But before we dive in — tell me in the comments:
+> How many cars have you bought in your lifetime?"
 
 ---
 
-## [02:00 – 05:00] الفصل الأول: التكلفة الحقيقية للسيارة
+## [02:00 – 05:00] Chapter 1: The Real Cost of a Car
 
-**[رسوم متحركة: جدول تكاليف]**
+**[Animated breakdown table]**
 
-> "لنفرض أنك اشتريت سيارة بـ 120,000 ريال.
-> تظن أنك دفعت 120,000 ريال فقط؟
-> خطأ. الحقيقة مختلفة تمامًا."
+> "Let's say you buy a car for $35,000.
+> You think you paid $35,000, right?
+> Wrong. Here's what you actually pay over 5 years:"
 
-**[قائمة تظهر بالتتالي على الشاشة:]**
+**[Items appear one by one with sound effects:]**
 
 ```
-سعر السيارة:         120,000 ريال
-التأمين (5 سنوات):    30,000 ريال
-الصيانة (5 سنوات):   15,000 ريال
-الوقود (5 سنوات):    18,000 ريال
-رسوم الترخيص:         2,500 ريال
-الغرامات والمتنوعات:   3,000 ريال
-─────────────────────────────────
-المجموع الحقيقي:     188,500 ريال
-```
-
-> "لكن الأسوأ من هذا كله... هو فقدان القيمة."
-
----
-
-## [05:00 – 08:00] الفصل الثاني: فقدان القيمة (Depreciation)
-
-**[رسوم متحركة: رسم بياني ينزل بسرعة]**
-
-> "السيارة الجديدة تخسر 15 إلى 20% من قيمتها في اللحظة التي تخرج فيها من المعرض.
->
-> في السنة الأولى؟ تخسر 25%.
-> بعد 5 سنوات؟ قيمتها النصف أو أقل.
->
-> يعني سيارتك الـ 120,000 ريال...
-> بعد 5 سنوات ستبيعها بـ 50,000 ريال في أحسن حال."
-
-**[حساب الخسارة الكاملة:]**
-
-```
-ما دفعته فعليًا:        188,500 ريال
-ما ستحصل عليه عند البيع: 50,000 ريال
+Purchase price:              $35,000
+Insurance (5 years):         $8,500
+Maintenance (5 years):       $4,200
+Fuel (5 years):              $7,500
+Registration & taxes:        $1,800
+Parking & misc:              $2,000
 ─────────────────────────────────────
-خسارتك الصافية:        138,500 ريال في 5 سنوات
-= 27,700 ريال في السنة
-= 2,308 ريال في الشهر
+Real Total Cost:             $59,000
 ```
 
-> "بمعنى آخر، أنت تدفع أكثر من 2,300 ريال شهريًا مقابل... التنقل فقط."
+> "But the worst part of all? Depreciation."
 
 ---
 
-## [08:00 – 11:00] الفصل الثالث: تكلفة الفرصة البديلة
+## [05:00 – 08:00] Chapter 2: Depreciation – The Silent Wealth Killer
 
-**[رسوم متحركة: مقارنة بين مسارين]**
+**[Animated bar chart dropping fast]**
 
-> "الآن السؤال الأهم: لو أنك استثمرت هذه الأموال بدلاً من إنفاقها على السيارة...
-> ماذا كان سيحدث؟"
+> "The moment you drive a new car off the dealership lot,
+> it loses 15 to 20% of its value.
+>
+> By the end of year one? It's lost 25%.
+> After 5 years? It's worth half — or less.
+>
+> So your $35,000 car…
+> in 5 years, you'll sell it for maybe $14,000."
 
-**[حساب الاستثمار:]**
+**[Loss calculation on screen:]**
 
 ```
-لو استثمرت 2,308 ريال شهريًا لمدة 5 سنوات
-بعائد سنوي 8% (متوسط سوق الأسهم)...
-
-النتيجة: 170,000 ريال تقريبًا!
+What you actually paid:           $59,000
+What you get when you sell:       $14,000
+──────────────────────────────────────────
+Your net loss over 5 years:       $45,000
+= $9,000 per year
+= $750 per month
 ```
 
-> "يعني بدلاً من أن تكون خسرت 138,500 ريال...
-> كنت ستكسب 170,000 ريال.
->
-> الفرق؟ 308,000 ريال.
->
-> هذا هو الثمن الحقيقي للسيارة."
+> "In other words, you're spending $750 a month
+> just for the privilege of… getting from A to B."
 
 ---
 
-## [11:00 – 13:00] الفصل الرابع: هل يعني هذا ألا تشتري سيارة؟
+## [08:00 – 11:00] Chapter 3: The Opportunity Cost
 
-**[شخصية متحركة تسأل بحيرة]**
+**[Split-screen animation: two paths diverging]**
 
-> "بالطبع لا! أنا لا أقول لك لا تشتري سيارة.
-> أنا أقول لك: اشتر سيارة بذكاء.
->
-> إليك القواعد الذهبية:"
+> "Now here's the question nobody asks:
+> What if you had invested that money instead?
+> What would actually happen?"
 
-**[قائمة بالقواعد:]**
+**[Investment calculation animates:]**
 
 ```
-✅ القاعدة 1: لا تشتري سيارة جديدة أبدًا
-   (دع شخصًا آخر يتحمل خسارة السنة الأولى)
+If you invested $750/month for 5 years
+at an 8% annual return (avg. stock market)...
 
-✅ القاعدة 2: السيارة يجب ألا تتجاوز 10-15% من دخلك السنوي
+Result: ~$55,000
 
-✅ القاعدة 3: اشتر النقد إن استطعت – القرض يضاعف التكلفة
+Over 20 years at the same rate...
 
-✅ القاعدة 4: السيارة الأفضل ليست الأغلى – بل الأوثوق
+Result: ~$530,000
+```
 
-✅ القاعدة 5: احتفظ بها أطول مدة ممكنة
+> "So instead of being $45,000 poorer after 5 years…
+> you could be $55,000 richer.
+>
+> The difference between those two choices?
+> Over $100,000.
+>
+> That's the real price of a car."
+
+---
+
+## [11:00 – 13:00] Chapter 4: So Should You Never Buy a Car?
+
+**[Animated character shrugging]**
+
+> "Of course not. I'm not saying don't buy a car.
+> I'm saying: buy smart.
+>
+> Here are the Golden Rules:"
+
+**[Rules appear one at a time:]**
+
+```
+✅ Rule 1: Never buy a brand new car
+   (let someone else take the first-year depreciation hit)
+
+✅ Rule 2: Your car should cost no more than 10–15%
+   of your annual income
+
+✅ Rule 3: Pay cash if possible — financing doubles the cost
+
+✅ Rule 4: The best car is not the most expensive,
+   it's the most reliable
+
+✅ Rule 5: Keep it as long as possible
+   (the longer you keep it, the cheaper it gets per year)
 ```
 
 ---
 
-## [13:00 – 14:30] الفصل الخامس: قصة نجاح حقيقية
+## [13:00 – 14:30] Chapter 5: Real-Life Story
 
-**[رسوم متحركة: شخصيتان متناقضتان]**
+**[Two animated characters side by side]**
 
-> "محمد وخالد، كلاهما يكسب 15,000 ريال شهريًا.
+> "Meet Mike and Jake. Both earn $60,000 a year.
 >
-> محمد اشترى سيارة فارهة بالتقسيط: 3,000 ريال/شهر.
-> خالد اشترى سيارة مستعملة موثوقة: 800 ريال/شهر.
+> Mike financed a new car — $700/month payment.
+> Jake bought a reliable used car — $250/month total cost.
 >
-> الفرق: 2,200 ريال شهريًا.
+> The difference: $450/month.
 >
-> استثمر خالد هذا الفرق لمدة 20 سنة بعائد 8%...
+> Jake invested that $450 every month for 20 years
+> at an 8% return…
 >
-> النتيجة: خالد يمتلك 1.3 مليون ريال إضافية!
-> بينما محمد... لا يزال يدفع الأقساط."
+> Result: Jake has an extra $265,000.
+>
+> Mike? Still making car payments."
 
 ---
 
-## [14:30 – 15:00] الخاتمة والـ CTA
+## [14:30 – 15:00] OUTRO & CTA
 
-**[شخصية تنظر مباشرة للكاميرا]**
+**[Character looks directly at camera]**
 
-> "القرارات الصغيرة اليومية هي التي تصنع الثروات.
+> "Small daily decisions are what build — or destroy — wealth.
 >
-> السيارة ليست عدوك... لكن الجهل بتكلفتها الحقيقية هو العدو.
+> A car isn't your enemy.
+> But not knowing its true cost? That's the real danger.
 >
-> إذا أفادك هذا الفيديو، اضغط على زر الإعجاب الآن
-> وشارك هذا الفيديو مع شخص يفكر في شراء سيارة.
+> If this video helped you see money differently,
+> hit the like button right now —
+> it takes 2 seconds and it helps this channel grow.
 >
-> وفي الفيديو القادم... سنتكلم عن موضوع أخطر بكثير:
-> كيف يسرق التضخم أموالك وأنت نائم؟
+> Share this with someone who's about to buy a new car.
+> You might just save them thousands of dollars.
 >
-> اشترك حتى لا تفوّته!"
+> And in the next video, I'm covering something even more dangerous:
+> How inflation is silently shrinking your savings while you sleep.
+>
+> Subscribe so you don't miss it."
 
 ---
 
-## ملاحظات الإنتاج
+## Production Notes
 
-| العنصر | التفاصيل |
-|--------|----------|
-| **الرسوم المتحركة** | رسوم بسيطة 2D – أسلوب Explainer Video |
-| **الموسيقى** | موسيقى خلفية هادئة + مؤثرات صوتية |
-| **الألوان** | أزرق داكن + ذهبي + أبيض |
-| **الخط** | عربي عريض وواضح |
-| **المؤثرات** | أرقام تعداد تلقائي، أسهم توضيحية |
-| **الصوت** | صوت ذكوري واثق، نبرة تعليمية |
+| Element | Details |
+|---------|---------|
+| **Animation Style** | Flat 2D – clean explainer video look |
+| **Background Music** | Calm, upbeat (Artlist or Uppbeat) |
+| **Color Scheme** | Navy + gold + white |
+| **Font** | Montserrat ExtraBold for headings |
+| **Effects** | Auto-counting numbers, animated arrows |
+| **Voiceover** | Confident male voice, energetic delivery |
+| **Thumbnail Text** | "YOUR CAR IS MAKING YOU POOR" |
+| **Thumbnail Visual** | Character shocked next to burning car |

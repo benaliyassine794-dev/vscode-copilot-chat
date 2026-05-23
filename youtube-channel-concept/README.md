@@ -1,29 +1,30 @@
-# قناة يوتيوب "عقل المال" – مفهوم شامل
+# "Money Mind" YouTube Channel – Complete Concept
 
-مستوحى من نجاح قناة **Wealth Logic** الإنجليزية، هذا المشروع يقدّم مفهومًا متكاملًا لقناة تعليم مالي باللغة العربية بأسلوب الرسوم المتحركة.
+Inspired by the success of **Wealth Logic**, this project delivers a full concept for an English-language personal finance education channel using animated explainer videos.
 
-## محتويات هذا المجلد
+## What's in This Folder
 
-| الملف | الوصف |
-|-------|-------|
-| `channel-concept.md` | المفهوم الكامل للقناة والاستراتيجية |
-| `branding-guide.md` | دليل الهوية البصرية والألوان والشخصيات |
-| `content-calendar.md` | تقويم محتوى لـ 6 أشهر + 52 فكرة فيديو |
-| `video-scripts/script-01-car-trap.md` | سكريبت فيديو كامل جاهز للتصوير |
+| File | Description |
+|------|-------------|
+| `channel-concept.md` | Full channel strategy, KPIs, and monetization plan |
+| `branding-guide.md` | Visual identity guide: colors, fonts, thumbnails, animation style |
+| `content-calendar.md` | 6-month content calendar + 52 video ideas + competitor analysis |
+| `video-scripts/script-01-car-trap.md` | Complete production-ready script for Episode 1 |
 
-## الفكرة الجوهرية
+## The Core Idea
 
-قناة **Wealth Logic** نجحت لأنها:
-1. تشرح موضوعات مالية معقّدة بأسلوب بسيط
-2. تستخدم رسوم متحركة جذابة بدل تصوير الوجه
-3. تختار عناوين تثير الفضول وتُقارن بين خيارين
-4. تستهدف الطبقة الوسطى التي تريد تحسين وضعها المالي
+**Wealth Logic** succeeded because it:
+1. Explains complex financial topics in plain, simple language
+2. Uses engaging 2D animations instead of talking-head filming
+3. Picks titles that spark curiosity through comparisons
+4. Targets the middle class looking to improve their financial situation
 
-**عقل المال** يطبّق نفس الصيغة للجمهور العربي الذي يفتقر لمحتوى مشابه.
+**Money Mind** applies the exact same formula with a broader topic range
+and a stronger focus on beginner-friendly content.
 
-## كيف تبدأ؟
+## How to Get Started
 
-1. اقرأ `channel-concept.md` لفهم الاستراتيجية
-2. راجع `branding-guide.md` لتصميم الهوية البصرية
-3. ابدأ بتصوير الفيديو الأول باستخدام `video-scripts/script-01-car-trap.md`
-4. استخدم `content-calendar.md` لتخطيط المحتوى
+1. Read `channel-concept.md` for the full strategy
+2. Review `branding-guide.md` to design your visual identity
+3. Film Episode 1 using `video-scripts/script-01-car-trap.md`
+4. Use `content-calendar.md` to plan your next 6 months of content
