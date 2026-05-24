@@ -1,0 +1,86 @@
+{
+  "name": "Money Mind – Weekly Analytics Report",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 3"
+            }
+          ]
+        }
+      },
+      "id": "cron-wednesday-analytics",
+      "name": "Every Wednesday 9 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "channel",
+        "operation": "getAll",
+        "part": ["statistics"],
+        "mine": true
+      },
+      "id": "youtube-channel-stats",
+      "name": "Get Channel Statistics",
+      "type": "n8n-nodes-base.youTube",
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "resource": "video",
+        "operation": "getAll",
+        "part": ["statistics", "snippet"],
+        "mine": true,
+        "additionalFields": {
+          "maxResults": 4,
+          "order": "date"
+        }
+      },
+      "id": "youtube-recent-videos",
+      "name": "Get Last 4 Videos",
+      "type": "n8n-nodes-base.youTube",
+      "position": [500, 480]
+    },
+    {
+      "parameters": {
+        "jsCode": "const channel = $('Get Channel Statistics').first().json;\nconst videos = $('Get Last 4 Videos').all();\n\nconst subs    = parseInt(channel.statistics?.subscriberCount || 0);\nconst views   = parseInt(channel.statistics?.viewCount || 0);\nconst totalVids = parseInt(channel.statistics?.videoCount || 0);\n\nlet videoLines = '';\nfor (const v of videos) {\n  const s = v.json.statistics || {};\n  const title = v.json.snippet?.title || 'Unknown';\n  const vViews = parseInt(s.viewCount || 0);\n  const likes  = parseInt(s.likeCount || 0);\n  const comments = parseInt(s.commentCount || 0);\n  const ctr = vViews > 0 ? ((likes / vViews) * 100).toFixed(2) : '0.00';\n  videoLines += `\\n📹 **${title}**\\n   👁 Views: ${vViews.toLocaleString()} | 👍 Likes: ${likes.toLocaleString()} | 💬 Comments: ${comments} | Engagement: ${ctr}%\\n`;\n}\n\nreturn [{ json: {\n  subscribers: subs.toLocaleString(),\n  totalViews:  views.toLocaleString(),\n  totalVideos: totalVids,\n  videoLines,\n  date: new Date().toDateString()\n}}];"
+      },
+      "id": "build-report",
+      "name": "Build Analytics Report",
+      "type": "n8n-nodes-base.code",
+      "position": [760, 380]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "=📊 **MONEY MIND – Weekly Analytics Report**\n📅 {{ $json.date }}\n\n━━━━━━━━━━━━━━━━━━━━\n👥 **Total Subscribers:** {{ $json.subscribers }}\n👁 **Total Views:** {{ $json.totalViews }}\n🎬 **Total Videos:** {{ $json.totalVideos }}\n━━━━━━━━━━━━━━━━━━━━\n\n**Last 4 Videos Performance:**\n{{ $json.videoLines }}\n━━━━━━━━━━━━━━━━━━━━\n✅ Review CTR targets: 6–10%\n✅ Review watch duration: 50%+\n✅ Check which topic performed best"
+            }
+          ]
+        }
+      },
+      "id": "send-report",
+      "name": "Send Report to Discord",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1020, 380]
+    }
+  ],
+  "connections": {
+    "Every Wednesday 9 AM":   { "main": [[{ "node": "Get Channel Statistics", "type": "main", "index": 0 }, { "node": "Get Last 4 Videos", "type": "main", "index": 0 }]] },
+    "Get Channel Statistics": { "main": [[{ "node": "Build Analytics Report", "type": "main", "index": 0 }]] },
+    "Get Last 4 Videos":      { "main": [[{ "node": "Build Analytics Report", "type": "main", "index": 0 }]] },
+    "Build Analytics Report": { "main": [[{ "node": "Send Report to Discord", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

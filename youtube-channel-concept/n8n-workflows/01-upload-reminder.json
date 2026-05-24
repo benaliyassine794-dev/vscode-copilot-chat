@@ -1,0 +1,105 @@
+{
+  "name": "Money Mind – Upload Reminder (10 AM)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * 2"
+            }
+          ]
+        }
+      },
+      "id": "cron-tuesday",
+      "name": "Every Tuesday 10 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 200]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * 3"
+            }
+          ]
+        }
+      },
+      "id": "cron-wednesday",
+      "name": "Every Wednesday 10 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 340]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * 5"
+            }
+          ]
+        }
+      },
+      "id": "cron-friday",
+      "name": "Every Friday 10 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 480]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * 0"
+            }
+          ]
+        }
+      },
+      "id": "cron-sunday",
+      "name": "Every Sunday 10 AM",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 620]
+    },
+    {
+      "parameters": {
+        "jsCode": "const day = new Date().getDay();\nconst types = {\n  2: { day: 'Tuesday',   type: 'Main Educational Video', duration: '12–18 min', emoji: '🎓' },\n  3: { day: 'Wednesday', type: 'Quick Money Tip',         duration: '5–7 min',   emoji: '💡' },\n  5: { day: 'Friday',    type: 'Comparison Video (A vs B)', duration: '10–15 min', emoji: '⚖️' },\n  0: { day: 'Sunday',    type: 'Myth-Busting / Story',    duration: '8–12 min',  emoji: '🔥' }\n};\nreturn [{ json: types[day] }];"
+      },
+      "id": "set-video-type",
+      "name": "Set Video Type",
+      "type": "n8n-nodes-base.code",
+      "position": [500, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "={{ $json.emoji }} **UPLOAD TIME – Money Mind**\n\n📅 Today is **{{ $json.day }}**\n🎬 Video Type: **{{ $json.type }}**\n⏱ Target Duration: {{ $json.duration }}\n\n✅ Checklist:\n- [ ] Thumbnail ready (1280×720)\n- [ ] Title under 60 characters\n- [ ] Description with timestamps\n- [ ] Tags added (10–15)\n- [ ] End screen set up\n- [ ] Pinned comment ready\n\n🕙 **Upload NOW at 10:00 AM!**"
+            }
+          ]
+        }
+      },
+      "id": "discord-notify",
+      "name": "Send Discord Reminder",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [760, 400]
+    }
+  ],
+  "connections": {
+    "Every Tuesday 10 AM":   { "main": [[{ "node": "Set Video Type", "type": "main", "index": 0 }]] },
+    "Every Wednesday 10 AM": { "main": [[{ "node": "Set Video Type", "type": "main", "index": 0 }]] },
+    "Every Friday 10 AM":    { "main": [[{ "node": "Set Video Type", "type": "main", "index": 0 }]] },
+    "Every Sunday 10 AM":    { "main": [[{ "node": "Set Video Type", "type": "main", "index": 0 }]] },
+    "Set Video Type":        { "main": [[{ "node": "Send Discord Reminder", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}
