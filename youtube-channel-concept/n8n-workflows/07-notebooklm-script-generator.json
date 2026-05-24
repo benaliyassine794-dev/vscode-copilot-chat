@@ -1,0 +1,14 @@
+{
+  "name": "Money Mind – AI Script Generator (NotebookLM)",
+  "description": "Paste any book text, excerpt, or topic in the chat → get a complete Money Mind video script instantly. Uses OpenAI GPT with conversation memory.",
+  "workflowId": "VzWvHyltie984f2a",
+  "url": "https://er12f6.app.n8n.cloud/workflow/VzWvHyltie984f2a",
+  "nodes": ["Chat Trigger (public URL)", "OpenAI GPT (gpt-4o-mini)", "Conversation Memory", "Money Mind Script Writer Agent"],
+  "usage": "Open the public chat URL from n8n. Type a book title, paste an excerpt, or give a topic. The AI generates a complete video script in Money Mind format.",
+  "examples": [
+    "Rich Dad Poor Dad – Chapter 1 on assets vs liabilities",
+    "Topic: emergency fund, make it a Quick Tip video",
+    "Book excerpt: [paste any text from a finance book]",
+    "Myth: you need to be rich to invest"
+  ]
+}
